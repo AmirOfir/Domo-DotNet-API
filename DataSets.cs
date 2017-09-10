@@ -105,7 +105,7 @@ namespace DomoDotNetAPI
 				string[] vals = new string[lstProps.Length];
 				for (int i = 0; i < lstProps.Length; i++)
 				{
-					vals[i] = lstProps[i].GetValue(item).ToString();
+					vals[i] = lstProps[i].GetValue(item)?.ToString();
 				}
 				csv.AppendLine(string.Join(",", vals));
 			}
